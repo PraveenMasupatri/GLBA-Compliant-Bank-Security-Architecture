@@ -1,11 +1,11 @@
 # Community Bank Incident Remediation and Security Architecture Redesign
 
-## 🎯 Project Overview
+## Project Overview
 In early 2025, a community bank employing approximately 200 staff suffered a prolonged and undetected cyberattack. The attackers gained initial access through a phishing email and successfully moved laterally across the organization's flat network, compromising ATM systems, teller workstations, Linux servers, and cloud hosted services. The breach remained hidden until a third party audit discovered the suspicious activity, triggering mandatory GLBA disclosure. 
 
 This repository documents the comprehensive root cause analysis and the subsequent $400,000 proposed security architecture overhaul designed to rebuild a resilient, segmented, and heavily monitored environment.
 
-## 🔍 Root Cause and Vulnerability Analysis
+## Root Cause and Vulnerability Analysis
 The attackers, suspected to be a nation state Advanced Persistent Threat (APT), exploited several systemic technical and operational vulnerabilities. 
 
 **Key findings from the post incident analysis include:**
@@ -15,7 +15,7 @@ The attackers, suspected to be a nation state Advanced Persistent Threat (APT), 
 * Remote devices lacked encryption, Mobile Device Management (MDM) enrollment, and Multi Factor Authentication (MFA) enforcement.
 * Backup systems were neither frequently tested nor encrypted, drastically increasing the risk associated with potential ransomware attacks.
 
-## 🔐 The Remediation Architecture
+## The Remediation Architecture
 To address these critical vulnerabilities, I proposed a phased security overhaul prioritizing network segmentation, device hardening, and centralized monitoring. The selected technologies balance robust functionality with budget efficiency.
 
 ### Core Architectural Enhancements:
@@ -26,7 +26,7 @@ To address these critical vulnerabilities, I proposed a phased security overhaul
 * **Identity and Access Management (IAM):** Centralized identity management through Azure Active Directory P1, strictly enforcing Microsoft Entra MFA and Role Based Access Control (RBAC).
 * **Secure Backups:** Automated encrypted database backups utilizing Wasabi cloud storage and Veeam orchestration to ensure business continuity.
 
-## 📊 Regulatory Compliance and Success Metrics
+## Regulatory Compliance and Success Metrics
 This architecture was specifically engineered to align with the regulatory mandates governing financial institutions, including the Gramm Leach Bliley Act (GLBA), the FFIEC Cybersecurity Framework, and PCI DSS. 
 
 **To validate the effectiveness of these security controls, the following Key Performance Indicators will be tracked:**
@@ -36,5 +36,5 @@ This architecture was specifically engineered to align with the regulatory manda
 * Eliminating critical unpatched systems within seven days of vendor release.
 * Measurable reductions in Mean Time to Detect (MTTD) and Mean Time to Respond (MTTR) driven by the new SIEM integration.
 
-## ✅ Conclusion
+## Conclusion
 This project illustrates a critical transition from a reactive, vulnerable flat network to a highly segmented, proactive, and policy driven infrastructure. By directly addressing the root causes of the initial breach, this architecture minimizes the attack surface, hardens user access, and ensures the bank can maintain operational continuity and customer trust in a digital first era.
